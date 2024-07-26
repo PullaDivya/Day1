@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+//import { UserContext } from "./Home";
+//import { globalContext } from "./App";
 
 function Reg() {
     const [collegeIdValue, setCollegeId] = useState('');
@@ -9,6 +11,7 @@ function Reg() {
     const [branchValue, setBranch] = useState('');
     const [yearValue, setYear] = useState('');
     const [userValue, setUser] = useState('');
+    //const{globalUserObject,setGlobalUserObject}=UserContext(globalContext)
 
 
     const getCollegeId = (event) => {
@@ -48,6 +51,7 @@ function Reg() {
         setUser(obj);
         console.log(obj);
         console.log(userValue);
+        //setGlobalUserObject(obj);
     }
     return (
         <div className="card" style={{ align: 'center', width: '300px', padding: '20px'}}>

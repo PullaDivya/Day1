@@ -24,22 +24,28 @@ function App() {
 
 export default App;*/
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-//import { createContext,useState } from 'react';
-
-//export const globalContext=createContext();
+//import CardList from './cardlist';
+import { createContext,useState } from 'react';
+import Profile from './profile';
 import Ass3 from './project';
 import Home from './Home';
+
+export const globalContext=createContext();
+
 function App(){
-  //const [globalCount,setGlobalCount]=useState(0);
+  const [globalCount,setGlobalCount]=useState(0);
+  const [globalUserObject,setglobalUserObject]=useState({});
     return(
-      //<globalContext.Provider value={{globalCount,setGlobalCount}}>
+      <globalContext.Provider value={{globalCount,setGlobalCount,globalUserObject,setglobalUserObject}}>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="/Ass3" element={<Ass3/>}/>
+                <Route path="/project" element={<Ass3/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+
             </Routes>
         </BrowserRouter>
-        //</globalContext.Provider>
+        </globalContext.Provider>
     );
 }
 export default App;

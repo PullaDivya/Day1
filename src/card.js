@@ -2,7 +2,7 @@ import watch from "./watch.jpeg";
 function Card(props){
     return(
         <div>
-            <img src={watch}  width="100" style={{border:'10px solid #FF0000',borderRadius:'50px'}}  />
+            <img src={watch} alt="hii" width="100" style={{border:'10px solid #FF0000',borderRadius:'50px'}}  />
             <h1>{props.program}</h1>
             <h2>{props.col}</h2>
             <h2>{props.user.name}</h2>
